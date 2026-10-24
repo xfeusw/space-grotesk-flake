@@ -10,6 +10,8 @@ stdenvNoCC.mkDerivation {
 
   src = ./space-grotesk.ttf;
 
+  dontUnpack = true;
+
   installPhase = ''
     runHook preInstall
     install -Dm644 *.ttf -t $out/share/fonts/truetype
